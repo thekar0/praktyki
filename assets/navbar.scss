@@ -1,0 +1,50 @@
+@use "../node_modules/bootstrap/scss/bootstrap" as *;
+@use "variables" as *;
+
+body {
+  background-color: $body-bg;
+}
+
+.navbar 
+{
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    background-color: $background_color;
+    #navbar_menu
+    {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: calc(100% * (5/6)); //Na figmie caly header = 1440 a menu 1200 | 1200/1440 = 5/6
+        height: 100%;
+        align-items: center;
+        img
+        {
+            height: 90%;
+        }
+        #links_holder
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 32%;
+            color: grey;
+            section
+            {
+                display: flex;
+                justify-content: space-around;
+            }
+            img
+            {
+                width: 32%;
+            }
+        }
+        #buttons_holder
+        {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

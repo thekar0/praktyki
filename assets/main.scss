@@ -1,0 +1,29 @@
+@use "../node_modules/bootstrap/scss/bootstrap" as *;
+@use "variables" as *;
+
+*{
+    font-family: 'Encode Sans', sans-serif;
+}
+
+
+.button_type_1
+{
+    height: 90%;
+    aspect-ratio: 3/1;
+    border: none;
+    border-radius: 0.85rem;
+    font-weight: bold;
+    color: white;
+    background-color: $primary_color;
+}
+
+.button_type_2
+{
+    height: 90%;
+    aspect-ratio: 3/1;
+    border: none;
+    border-radius: 0.85rem;
+    font-weight: bold;
+    color: $primary_color;
+    background-color: white;
+}
