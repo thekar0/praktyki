@@ -5,10 +5,9 @@
     font-family: 'Encode Sans', sans-serif;
 }
 
-
 .button_type_1
 {
-    height: 90%;
+    width: 50%;
     aspect-ratio: 3/1;
     border: none;
     border-radius: 0.85rem;
@@ -19,11 +18,89 @@
 
 .button_type_2
 {
-    height: 90%;
+    width: 50%;
     aspect-ratio: 3/1;
     border: none;
     border-radius: 0.85rem;
     font-weight: bold;
     color: $primary_color;
     background-color: white;
+}
+
+header 
+{
+    aspect-ratio: 16/9;
+    margin: auto;
+    width: 100%;
+    max-width: $max_width;
+    background-image: url('images/header_building.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 38rem;
+    padding: 4rem;
+    background-color: $soft_gray_color;
+
+    h1 
+    {
+      font-weight: bold;
+      font-size: clamp(1rem, 4vw, 6rem); /* Responsive font size */
+      span 
+      {
+        color: $primary_color;
+      }
+    }
+
+    >span 
+    {
+      max-width: 40%;
+      display: block;
+      font-size: clamp(0.5rem, 0.5vw, 6rem); /* Responsive font size */
+    }
+
+    #buy_sell_rent_buttons
+    {
+        margin-top: 2rem;
+        display: flex;
+        width: 60%;
+        font-size: clamp(0.5rem, 0.7vw, 6rem); /* Responsive font size */
+
+        .button_type_2
+        {
+            width: 20%;
+            margin: 0.4rem;
+            transition: all 0.3s;
+        }
+
+        .button_type_2:hover
+        {
+            color: white;
+            background-color: $primary_color;
+        }
+    }
+
+    #filter_selection
+    {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        background-color: $background_color;
+        padding: 1rem;
+        border-radius: 1rem;
+        align-items: center;
+        select
+        {
+            width: 28%;
+            padding: 1rem;
+            border: 0.1px solid rgb(219, 219, 219);
+            border-radius: 6px;
+        }
+        img
+        {
+            background-color: $primary_color;
+            height: 3rem;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            padding: 0.6rem;
+        }
+    }
 }

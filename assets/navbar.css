@@ -11859,17 +11859,18 @@ body {
 }
 
 .navbar {
-  width: 100%;
+  width: 55%;
   height: 6rem;
   padding: 1rem;
   background-color: #FFFFFF;
+  margin: auto;
 }
 .navbar #navbar_menu {
+  width: 90%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: 83.3333333333%;
-  height: 100%;
   align-items: center;
 }
 .navbar #navbar_menu img {
