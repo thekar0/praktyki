@@ -23,7 +23,7 @@
 
 <header>
     <h1>Find Comfortable<br>Suitable <span>Home</span><br>Priority <img src="assets/images/real_estate_sticker.svg" alt="Real Estate"></h1>
-    <span>BlumHouse is an international real estate company that offers services like property apprasial as well as the sale, purchase, and investment of real estate</span>
+    <span class="info_paragraph">BlumHouse is an international real estate company that offers services like property apprasial as well as the sale, purchase, and investment of real estate</span>
 
     <section id="buy_sell_rent_buttons">
         <button class="button_type_2">Buy</button>
@@ -50,6 +50,50 @@
 
 </header>
 
+<section id="spacer"></section>
+
+<script>
+  const spacer = document.getElementById('spacer');
+  const itemCount = 8;
+
+  for (let i = 0; i < itemCount; i++) {
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <span>BLUMHOUSE</span>
+      <img src="assets/images/white_sticker.svg" alt="Blumhouse">
+    `;
+    spacer.appendChild(div);
+  }
+</script>
+
+<section id="video_section">
+    <div id="video_player">
+        <img src="assets/images/video_thumbnail.png" alt="House Tour">
+        <img src="assets/images/video_player_play_button.svg" alt="Play" id="play_button">
+    </div>
+
+    <div>
+        <h3>Building Trust, One Home at a Time. Realize Dreams into Reality</h3>
+        <span class="info_paragraph">We proudly showcase the journeys of our valued clients. Here, you will find a collection of real stories that highlight the exceptional of our service, and commitment we bring to each real estate transaction</span>
+
+        <section id="flexing_stats_container">
+            <div class="flexing_stats">
+                <span class="value">10+</span>
+                <span class="label">Awards Gained</span>
+            </div>
+
+            <div class="flexing_stats">
+                <span class="value">20+</span>
+                <span class="label">Years of Experience</span>
+            </div>
+
+            <div class="flexing_stats">
+                <span class="value">598</span>
+                <span class="label">Rented Home</span>
+            </div>
+        </section>
+    </div>
+</section>
 
 </body>
 </html>

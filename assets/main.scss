@@ -4,7 +4,10 @@
 *{
     font-family: 'Encode Sans', sans-serif;
 }
-
+body
+{
+    background-color: $background_color;
+}
 .button_type_1
 {
     width: 50%;
@@ -26,7 +29,11 @@
     color: $primary_color;
     background-color: white;
 }
-
+.info_paragraph
+{
+    color: rgb(177, 177, 177);
+    font-size: 0.9rem;
+}
 header 
 {
     aspect-ratio: 16/9;
@@ -36,7 +43,7 @@ header
     background-image: url('images/header_building.png');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 38rem;
+    background-size: 25vw;
     padding: 4rem;
     background-color: $soft_gray_color;
 
@@ -69,6 +76,7 @@ header
             width: 20%;
             margin: 0.4rem;
             transition: all 0.3s;
+            color: black;
         }
 
         .button_type_2:hover
@@ -101,6 +109,100 @@ header
             aspect-ratio: 1/1;
             border-radius: 100%;
             padding: 0.6rem;
+        }
+    }
+}
+
+#spacer
+{
+    display: flex;
+    align-items: center;
+    color: $background_color;
+    font-weight: 500;
+    aspect-ratio: 120/7;
+    margin: auto;
+    width: $max_width;
+    background-color: $primary_color;
+    overflow: hidden;
+    div
+    {
+        left: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.9vw;
+    }
+    img
+    {
+        margin: 0 1.2rem 0 0.6rem;
+        height: 0.7vw;
+        width: 0.7vw;
+    }
+
+    div:first-of-type
+    {
+        margin-left: -2.5rem;
+    }
+}
+
+#video_section
+{
+    display: flex;
+    justify-content: space-around   ;
+    padding: 5rem;
+    background-color: $background_color;
+    width: $max_width;
+    margin: auto;
+    #video_player
+    {
+        position: relative; 
+        display: flex;
+        justify-content: space-around;
+        img
+        {
+            height: 72%;
+            border-radius: 1rem;
+        }
+        #play_button
+        {
+            width: 3rem;
+            position: absolute;
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+ 
+        }
+    }
+    h3
+    {
+        font-size: 2.1rem;
+        font-weight: 600;
+        margin-bottom: 1.8rem;
+    }
+    #flexing_stats_container
+    {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        .flexing_stats
+        {
+            aspect-ratio: 7/4;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            .value
+            {
+                font-size: 2.5rem;
+                color: $primary_color;
+                font-weight: 600;
+            }
+            .label
+            {
+                font-size: 0.8rem;
+                font-weight: 400;
+                color: rgb(167, 167, 167);
+            }
         }
     }
 }

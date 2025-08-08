@@ -11858,6 +11858,10 @@ textarea.form-control-lg {
   font-family: "Encode Sans", sans-serif;
 }
 
+body {
+  background-color: #FFFFFF;
+}
+
 .button_type_1 {
   width: 50%;
   aspect-ratio: 3/1;
@@ -11878,15 +11882,20 @@ textarea.form-control-lg {
   background-color: white;
 }
 
+.info_paragraph {
+  color: rgb(177, 177, 177);
+  font-size: 0.9rem;
+}
+
 header {
   aspect-ratio: 16/9;
   margin: auto;
   width: 100%;
-  max-width: 55%;
+  max-width: 60%;
   background-image: url("images/header_building.png");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 38rem;
+  background-size: 25vw;
   padding: 4rem;
   background-color: #F9F9F9;
 }
@@ -11912,6 +11921,7 @@ header #buy_sell_rent_buttons .button_type_2 {
   width: 20%;
   margin: 0.4rem;
   transition: all 0.3s;
+  color: black;
 }
 header #buy_sell_rent_buttons .button_type_2:hover {
   color: white;
@@ -11938,6 +11948,85 @@ header #filter_selection img {
   aspect-ratio: 1/1;
   border-radius: 100%;
   padding: 0.6rem;
+}
+
+#spacer {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-weight: 500;
+  aspect-ratio: 120/7;
+  margin: auto;
+  width: 60%;
+  background-color: #4C4DDC;
+  overflow: hidden;
+}
+#spacer div {
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9vw;
+}
+#spacer img {
+  margin: 0 1.2rem 0 0.6rem;
+  height: 0.7vw;
+  width: 0.7vw;
+}
+#spacer div:first-of-type {
+  margin-left: -2.5rem;
+}
+
+#video_section {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem;
+  background-color: #FFFFFF;
+  width: 60%;
+  margin: auto;
+}
+#video_section #video_player {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+#video_section #video_player img {
+  height: 72%;
+  border-radius: 1rem;
+}
+#video_section #video_player #play_button {
+  width: 3rem;
+  position: absolute;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#video_section h3 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+}
+#video_section #flexing_stats_container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+#video_section #flexing_stats_container .flexing_stats {
+  aspect-ratio: 7/4;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+#video_section #flexing_stats_container .flexing_stats .value {
+  font-size: 2.5rem;
+  color: #4C4DDC;
+  font-weight: 600;
+}
+#video_section #flexing_stats_container .flexing_stats .label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(167, 167, 167);
 }
 
 /*# sourceMappingURL=main.css.map */
