@@ -11887,6 +11887,11 @@ body {
   font-size: 0.9rem;
 }
 
+h3 {
+  font-size: 2.2rem !important;
+  font-weight: 600 !important;
+}
+
 header {
   aspect-ratio: 16/9;
   margin: auto;
@@ -11979,7 +11984,7 @@ header #filter_selection img {
 
 #video_section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 5rem;
   background-color: #FFFFFF;
   width: 60%;
@@ -11991,21 +11996,18 @@ header #filter_selection img {
   justify-content: space-around;
 }
 #video_section #video_player img {
-  height: 72%;
   border-radius: 1rem;
 }
 #video_section #video_player #play_button {
   width: 3rem;
   position: absolute;
   position: absolute;
-  top: 38%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#video_section h3 {
-  font-size: 2.1rem;
-  font-weight: 600;
-  margin-bottom: 1.8rem;
+#video_section #text_container {
+  width: 45%;
 }
 #video_section #flexing_stats_container {
   margin-top: 2rem;
@@ -12027,6 +12029,77 @@ header #filter_selection img {
   font-size: 0.8rem;
   font-weight: 400;
   color: rgb(167, 167, 167);
+}
+
+#in_demand_locations_section {
+  width: 60%;
+  margin: auto;
+  background-color: #F9F9F9;
+  padding: 5rem;
+}
+#in_demand_locations_section #top_text_container {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#in_demand_locations_section #top_text_container h3 {
+  width: 40%;
+}
+#in_demand_locations_section #top_text_container .info_paragraph {
+  width: 40%;
+}
+#in_demand_locations_section #recommended_locations_container {
+  height: 30vw;
+  display: flex;
+  justify-content: space-between;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location {
+  width: 30%;
+  height: 100%;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location > img {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location .bottom_part {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location .bottom_part, #in_demand_locations_section #recommended_locations_container .recommended_location > img {
+  width: 100%;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location .bottom_part {
+  background-color: #FFFFFF;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location .location_name {
+  justify-content: flex-start;
+  width: 100%;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location .location_name img {
+  margin: 0.5rem;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location div .button_type_1 {
+  width: 50%;
+  margin: 0.4rem;
+  color: white;
+  transition: all 0.3s;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location div .button_type_1:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location div .price_value {
+  color: #4C4DDC;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */

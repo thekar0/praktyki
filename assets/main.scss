@@ -29,11 +29,19 @@ body
     color: $primary_color;
     background-color: white;
 }
+
 .info_paragraph
 {
     color: rgb(177, 177, 177);
     font-size: 0.9rem;
 }
+
+h3 
+{
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+}
+
 header 
 {
     aspect-ratio: 16/9;
@@ -148,7 +156,7 @@ header
 #video_section
 {
     display: flex;
-    justify-content: space-around   ;
+    justify-content: space-between;
     padding: 5rem;
     background-color: $background_color;
     width: $max_width;
@@ -160,7 +168,6 @@ header
         justify-content: space-around;
         img
         {
-            height: 72%;
             border-radius: 1rem;
         }
         #play_button
@@ -168,17 +175,15 @@ header
             width: 3rem;
             position: absolute;
             position: absolute;
-            top: 38%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
  
         }
     }
-    h3
+    #text_container
     {
-        font-size: 2.1rem;
-        font-weight: 600;
-        margin-bottom: 1.8rem;
+        width: 45%;
     }
     #flexing_stats_container
     {
@@ -203,6 +208,94 @@ header
                 font-weight: 400;
                 color: rgb(167, 167, 167);
             }
+        }
+    }
+}
+
+#in_demand_locations_section
+{
+    width: $max_width;
+    margin: auto;
+    background-color: $soft_gray_color;
+    padding: 5rem;
+    #top_text_container
+    {
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3
+        {
+            width: 40%;
+        }
+        .info_paragraph
+        {
+            width: 40%;
+        }
+    }
+    #recommended_locations_container{
+        height: 30vw;
+        display: flex;
+        justify-content: space-between;
+        .recommended_location
+        {
+            width: 30%;
+            height: 100%;
+            >img
+            {
+                border-radius: 0.5rem 0.5rem 0 0;
+            }
+            .bottom_part
+            {
+                border-radius: 0 0 0.5rem 0.5rem;
+            }
+            .bottom_part, >img
+            {
+                width: 100%;
+            }
+            .bottom_part
+            {
+                background-color: $background_color;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            .location_name
+            {
+                justify-content: flex-start;
+                width: 100%;
+                img
+                {
+                    margin: 0.5rem;
+                }
+            }
+            div
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                .button_type_1
+                {
+                    width: 50%;
+                    margin: 0.4rem;
+                    color: white;
+                    transition: all 0.3s;
+                    
+                }
+                .button_type_1:hover
+                {
+                    background-color: $background_color;
+                    color: black;
+                }
+                .price_value
+                {
+                    color: $primary_color;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }
+    
         }
     }
 }
