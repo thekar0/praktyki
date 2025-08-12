@@ -11854,12 +11854,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background-color: #fff;
-}
-
 .navbar {
-  width: 55%;
+  width: 60%;
   height: 6rem;
   padding: 1rem;
   background-color: #FFFFFF;
@@ -11874,26 +11870,40 @@ body {
   align-items: center;
 }
 .navbar #navbar_menu img {
-  height: 90%;
+  height: 75%;
 }
 .navbar #navbar_menu #links_holder {
   display: flex;
   justify-content: space-between;
   width: 32%;
   color: grey;
+  font-size: 0.9rem;
 }
 .navbar #navbar_menu #links_holder section {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .navbar #navbar_menu #links_holder img {
   width: 32%;
 }
+.navbar #navbar_menu #links_holder span:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #4C4DDC;
+}
 .navbar #navbar_menu #buttons_holder {
-  width: 25%;
-  height: 100%;
+  width: 32%;
+  height: 75%;
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
+}
+.navbar #navbar_menu #buttons_holder #login_button, .navbar #navbar_menu #buttons_holder #sign_up_button {
+  transition: all 0.3s;
+}
+.navbar #navbar_menu #buttons_holder #login_button:hover, .navbar #navbar_menu #buttons_holder #sign_up_button:hover {
+  filter: brightness(0.75);
 }
 
 /*# sourceMappingURL=navbar.css.map */

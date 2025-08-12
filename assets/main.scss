@@ -6,12 +6,12 @@
 }
 body
 {
-    background-color: $background_color;
+    background-color: blue;
 }
 .button_type_1
 {
-    width: 50%;
-    aspect-ratio: 3/1;
+    width: 47%;
+    aspect-ratio: 4/1;
     border: none;
     border-radius: 0.85rem;
     font-weight: bold;
@@ -21,8 +21,8 @@ body
 
 .button_type_2
 {
-    width: 50%;
-    aspect-ratio: 3/1;
+    width: 47%;
+    aspect-ratio: 4/1;
     border: none;
     border-radius: 0.85rem;
     font-weight: bold;
@@ -51,7 +51,7 @@ header
     background-image: url('images/header_building.png');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 25vw;
+    background-size: 55%;
     padding: 4rem;
     background-color: $soft_gray_color;
 
@@ -81,8 +81,9 @@ header
 
         .button_type_2
         {
-            width: 20%;
-            margin: 0.4rem;
+            width: 23%;
+            aspect-ratio: 3/1;
+            margin: 0.35rem;
             transition: all 0.3s;
             color: black;
         }
@@ -116,7 +117,7 @@ header
             height: 3rem;
             aspect-ratio: 1/1;
             border-radius: 100%;
-            padding: 0.6rem;
+            padding: 0.8rem;
         }
     }
 }
@@ -142,7 +143,7 @@ header
     }
     img
     {
-        margin: 0 1.2rem 0 0.6rem;
+        margin: 0 1.2rem 0 1.2rem;
         height: 0.7vw;
         width: 0.7vw;
     }
@@ -163,20 +164,23 @@ header
     margin: auto;
     #video_player
     {
-        position: relative; 
+        position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         img
         {
             border-radius: 1rem;
+            width: 90%;
+            height: auto;
+            display: block;
+            margin-left: 0;
         }
         #play_button
         {
             width: 3rem;
             position: absolute;
-            position: absolute;
             top: 50%;
-            left: 50%;
+            left: 46%;
             transform: translate(-50%, -50%);
  
         }
@@ -187,7 +191,7 @@ header
     }
     #flexing_stats_container
     {
-        margin-top: 2rem;
+        margin-top: 3rem;
         display: flex;
         justify-content: space-around;
         .flexing_stats
@@ -217,16 +221,17 @@ header
     width: $max_width;
     margin: auto;
     background-color: $soft_gray_color;
-    padding: 5rem;
+    padding: 5rem 0 5rem    0;
     #top_text_container
     {
-        margin-bottom: 5rem;
+        padding: 0 5rem 0 5rem;
+        margin-bottom: 3rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         h3
         {
-            width: 40%;
+            width: 50%;
         }
         .info_paragraph
         {
@@ -234,12 +239,12 @@ header
         }
     }
     #recommended_locations_container{
-        height: 30vw;
         display: flex;
         justify-content: space-between;
+        padding: 0 5rem 0 5rem;
         .recommended_location
         {
-            width: 30%;
+            width: 32%;
             height: 100%;
             >img
             {
@@ -259,14 +264,28 @@ header
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 1rem;
+                >img
+                {
+                    width: 10rem;
+                }
             }
             .location_name
             {
+                display: flex;
                 justify-content: flex-start;
+                align-items: center;
                 width: 100%;
-                img
+                >img
                 {
-                    margin: 0.5rem;
+                    margin-right: 0.4rem;
+                    width: 1.2rem;
+                }
+                >h4
+                {
+                    font-weight: 600;
+                    margin: 0;
+                    font-size: 1.3rem;
+                    margin-bottom: 0.3rem;
                 }
             }
             div
@@ -277,8 +296,10 @@ header
                 width: 100%;
                 .button_type_1
                 {
-                    width: 50%;
-                    margin: 0.4rem;
+                    width: 55%;
+                    aspect-ratio: 16/5;
+                    font-size: 0.9rem;
+                    font-weight: 500;
                     color: white;
                     transition: all 0.3s;
                     
@@ -291,11 +312,199 @@ header
                 .price_value
                 {
                     color: $primary_color;
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                     font-weight: 600;
+                }
+                .button_price_holder
+                {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1rem;
                 }
             }
     
+        }
+    }
+    #blue_background
+    {
+        background-color: $primary_color;
+        height: 10rem;
+        margin-top: -8rem;
+    }
+}
+
+#your_trusted_partner_section
+{
+    margin: auto;
+    width: $max_width;
+    padding: 5rem;
+    align-items: center;
+    .top_text_container
+    {
+        display: flex;
+        justify-content: space-between;
+        h3
+        {
+            width: 50%;
+        }
+        span
+        {
+            width: 40%;
+        }
+    }
+    #boxes_container
+    {
+        margin-top: 2rem;
+        .info_box
+        {
+            margin-top: 1rem;
+            display: flex;
+            background-color: $lavender_color;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.3rem 1rem 1.3rem 1rem;
+            border-radius: 1rem;
+            .text_container
+            {
+                margin-left: 1rem;
+                h6
+                {
+                    color: $primary_color;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                }
+                span
+                {
+                    color: white;
+                }
+            }
+            img:last-child
+            {
+                margin-left: auto;
+                height: 2.5rem;
+            }
+        }
+        .info_box:hover
+        {
+            span
+            {
+                display: block;
+            }
+        }
+    }
+}
+
+#start_listing_section
+{
+    width: $max_width;
+    margin: auto;
+    height: 30rem;
+    background-color: $soft_gray_color;
+    padding: 5rem 5rem 5rem 5rem;
+    #banner
+    {
+        border-radius: 1rem;
+        background-image: url('images/start_listing.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 4rem;
+        #banner_inside_container
+        {
+            width: 50%;
+            h2
+            {
+                color: white;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+            button
+            {
+                margin-top: 2rem;
+                width: 50%;
+                aspect-ratio: 4/1;
+            }
+        }
+    }
+}
+
+footer
+{
+    width: $max_width;
+    margin: auto;
+    background-color: $primary_color;
+    padding: 5rem 5rem 1rem 5rem;
+    #upper_text_container
+    {
+        display: flex;
+        justify-content: space-between;
+        #left_text_container
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 400;
+            width: 35%;
+            #logo
+            {
+                align-self: flex-start;
+                height: 3rem;
+                margin-bottom: 0.4rem;
+            }
+        }
+        #right_text_container
+        {
+            display: flex;
+            justify-content: space-between;
+            span
+            {
+                margin-bottom: 1rem;
+                color: white;
+                font-weight: 500;
+                font-size: 1.1rem;
+            }
+            a
+            {
+                margin-bottom: 0.4rem;
+                text-decoration: none;
+                font-weight: 300;
+                color: white;
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .links_column
+    {
+        display: flex;
+        flex-direction: column;
+        margin-right: 3rem;
+        #social_media_icons_container
+        {
+            justify-content: space-between;
+        }
+        img
+        {
+            width: 1.5rem;
+            margin-right: 1.3rem;
+        }
+    }
+    #last_links_column
+    {
+        margin: 0;
+    }
+    #lower_text_container
+    {
+        margin-top: 2rem;
+        color: white;
+        display: flex;
+        font-size: 0.9rem;
+        justify-content: space-between;
+        a
+        {
+            text-decoration: none;
+            color: white;
         }
     }
 }
