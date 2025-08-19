@@ -6,26 +6,25 @@
 }
 body
 {
-    background-color: blue;
 }
-.button_type_1
+
+.button_base
 {
     width: 47%;
     aspect-ratio: 4/1;
     border: none;
     border-radius: 0.85rem;
-    font-weight: bold;
+    font-weight: 500;
+}
+
+.button_type_1
+{
     color: white;
     background-color: $primary_color;
 }
 
 .button_type_2
 {
-    width: 47%;
-    aspect-ratio: 4/1;
-    border: none;
-    border-radius: 0.85rem;
-    font-weight: bold;
     color: $primary_color;
     background-color: white;
 }
@@ -42,6 +41,69 @@ h3
     font-weight: 600 !important;
 }
 
+.navbar 
+{
+    width: $max_width;
+    height: 6rem;
+    padding: 1rem;
+    background-color: $background_color;
+    margin: auto;
+    #navbar_menu
+    {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        align-items: center;
+        img
+        {
+            height: 75%;
+        }
+        #links_holder
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 32%;
+            color: grey;
+            font-size: 0.9rem;
+            font-weight: 400;
+            section
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            img
+            {
+                width: 32%;
+            }
+            span:hover
+            {
+                cursor: pointer;
+                transition: all 0.3s;
+                color: $primary_color;
+            }
+        }
+        #buttons_holder
+        {
+            width: 32%;
+            height: 75%;
+            display: flex;
+            font-weight: 500;
+            justify-content: space-between;
+            #login_button, #sign_up_button
+            {
+                transition: all 0.3s;
+            }
+            #login_button:hover, #sign_up_button:hover
+            {
+                filter: brightness(0.75);
+            }
+        }
+    }
+}
+
 header 
 {
     aspect-ratio: 16/9;
@@ -52,7 +114,7 @@ header
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 55%;
-    padding: 4rem;
+    padding: 5rem;
     background-color: $soft_gray_color;
 
     h1 
@@ -174,13 +236,14 @@ header
             height: auto;
             display: block;
             margin-left: 0;
+            object-fit: contain;
         }
         #play_button
         {
             width: 3rem;
             position: absolute;
             top: 50%;
-            left: 46%;
+            left: 45%;
             transform: translate(-50%, -50%);
  
         }
@@ -221,7 +284,7 @@ header
     width: $max_width;
     margin: auto;
     background-color: $soft_gray_color;
-    padding: 5rem 0 5rem    0;
+    padding: 5rem 0 5rem 0;
     #top_text_container
     {
         padding: 0 5rem 0 5rem;
@@ -240,12 +303,13 @@ header
     }
     #recommended_locations_container{
         display: flex;
-        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        justify-content: space-around;
         padding: 0 5rem 0 5rem;
         .recommended_location
         {
-            width: 32%;
-            height: 100%;
+            width: 30%;
             >img
             {
                 border-radius: 0.5rem 0.5rem 0 0;
@@ -261,6 +325,7 @@ header
             .bottom_part
             {
                 background-color: $background_color;
+                height: 9rem;
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 1rem;
@@ -328,8 +393,8 @@ header
     #blue_background
     {
         background-color: $primary_color;
-        height: 10rem;
-        margin-top: -8rem;
+        height: 11rem;
+        margin-top: -9rem;
     }
 }
 
@@ -364,6 +429,7 @@ header
             align-items: center;
             padding: 1.3rem 1rem 1.3rem 1rem;
             border-radius: 1rem;
+            transition: all 0.3s;
             .text_container
             {
                 margin-left: 1rem;
@@ -378,6 +444,12 @@ header
                     color: white;
                 }
             }
+            .icon 
+            {
+                color: #4C4DDC;           /* initial background */
+                --shape-color: white;     /* initial shapes */
+            }
+
             img:last-child
             {
                 margin-left: auto;
@@ -386,9 +458,22 @@ header
         }
         .info_box:hover
         {
-            span
+            cursor: pointer;
+            background-color: $primary_color;
+            h6
             {
-                display: block;
+                color: white;
+            }
+            .icon
+            {  
+                rect
+                {
+                    fill: white
+                }
+            }
+            img:last-child
+            {
+                filter: invert(1)
             }
         }
     }
@@ -398,9 +483,8 @@ header
 {
     width: $max_width;
     margin: auto;
-    height: 30rem;
     background-color: $soft_gray_color;
-    padding: 5rem 5rem 5rem 5rem;
+    padding: 5%;
     #banner
     {
         border-radius: 1rem;
@@ -408,7 +492,7 @@ header
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 4rem;
+        padding: 5%;
         #banner_inside_container
         {
             width: 50%;
@@ -416,7 +500,7 @@ header
             {
                 color: white;
                 font-weight: 500;
-                font-size: 2rem;
+                font-size: clamp(1rem, 4vw, 3rem);
             }
             button
             {
@@ -433,7 +517,7 @@ footer
     width: $max_width;
     margin: auto;
     background-color: $primary_color;
-    padding: 5rem 5rem 1rem 5rem;
+    padding: 5% 5% 1% 5%;
     #upper_text_container
     {
         display: flex;
@@ -444,13 +528,13 @@ footer
             flex-direction: column;
             justify-content: flex-start;
             color: white;
-            font-size: 0.9rem;
             font-weight: 400;
             width: 35%;
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
             #logo
             {
                 align-self: flex-start;
-                height: 3rem;
+                width: clamp(5rem, 80%, 20rem);
                 margin-bottom: 0.4rem;
             }
         }
@@ -458,12 +542,13 @@ footer
         {
             display: flex;
             justify-content: space-between;
+            width: 25%;
             span
             {
                 margin-bottom: 1rem;
                 color: white;
                 font-weight: 500;
-                font-size: 1.1rem;
+                font-size: clamp(0.8rem, 1.5vw, 1.6rem);
             }
             a
             {
@@ -471,7 +556,6 @@ footer
                 text-decoration: none;
                 font-weight: 300;
                 color: white;
-                font-size: 0.9rem;
             }
         }
     }
@@ -482,12 +566,12 @@ footer
         margin-right: 3rem;
         #social_media_icons_container
         {
+            display: flex;
             justify-content: space-between;
-        }
-        img
-        {
-            width: 1.5rem;
-            margin-right: 1.3rem;
+            img
+            {
+                width: clamp(0.8rem, 1.7vw, 1.75rem);
+            }
         }
     }
     #last_links_column
@@ -499,12 +583,72 @@ footer
         margin-top: 2rem;
         color: white;
         display: flex;
-        font-size: 0.9rem;
+        font-size: clamp(0.6rem, 1vw, 1.2rem);
         justify-content: space-between;
         a
         {
             text-decoration: none;
             color: white;
+        }
+    }
+    a
+    {
+        font-size: clamp(0.6rem, 1vw, 1.2rem) !important;
+        transition: 0.3s filter;
+    }
+    a:hover
+    {
+        filter: brightness(0.8);
+    }
+
+}
+
+@media screen and (width < 400px) 
+{
+    #start_listing_section
+    {
+        #banner
+        {
+            background-image: none;
+            background-color: $primary_color;
+            #banner_inside_container
+            {
+                width: 100%;
+                text-align: center;
+                button
+                {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width < 550px) 
+{
+    footer 
+    {
+        #upper_text_container
+        {
+            flex-direction: column;
+            justify-content: center;
+            #left_text_container
+            {
+                margin: auto;
+                margin-bottom: 2rem;
+                min-width: 75vw;
+                text-align: center;
+                >img
+                {
+                   margin: auto;
+                }
+            }
+            #right_text_container
+            {
+                width: 75%;
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
     }
 }

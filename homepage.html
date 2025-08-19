@@ -17,18 +17,42 @@
 </head>
 <body>
 
-<div id="navbar-placeholder">
-    <script src="assets/nav_loader.js"></script>
-</div>
+<!-- <nav class="navbar">
+    <section id="navbar_menu">
+        <img src="assets/images/blumhouse.svg" alt="Blumhouse Logo">
+
+        <section id="links_holder">
+            <span>Home</span>
+            <span>Properties</span>
+            <section>
+                <span>Buy</span>
+                <img src="assets/images/arrow_down.svg">
+            </section>
+            <section>
+                <span>Sell</span>
+                <img src="assets/images/arrow_down.svg">
+            </section>
+            <section>
+                <span>Rent</span>
+                <img src="assets/images/arrow_down.svg">
+            </section>
+        </section>
+
+        <section id="buttons_holder">
+            <button class="button_base button_type_2" id="login_button">Login</button>
+            <button class="button_base button_type_1" id="sign_up_button">Sign Up</button>
+        </section>
+    </section>
+</nav>
 
 <header>
     <h1>Find Comfortable<br>Suitable <span>Home</span><br>Priority <img src="assets/images/real_estate_sticker.svg" alt="Real Estate"></h1>
     <span class="info_paragraph">BlumHouse is an international real estate company that offers services like property apprasial as well as the sale, purchase, and investment of real estate</span>
 
     <section id="buy_sell_rent_buttons">
-        <button class="button_type_2">Buy</button>
-        <button class="button_type_2">Sell</button>
-        <button class="button_type_2">Rent</button>
+        <button class="button_base button_type_2">Buy</button>
+        <button class="button_base button_type_2">Sell</button>
+        <button class="button_base button_type_2">Rent</button>
     </section>
 
     <section id="filter_selection">
@@ -92,7 +116,7 @@
             </div>
         </section>
     </div>
-</section>
+</section> -->
 
 <section id="in_demand_locations_section">
     <div id="top_text_container">
@@ -111,7 +135,7 @@
                 </div>
                 <img src="assets/images/reviews.svg" alt="Reviews">
                 <div class="button_price_holder">
-                    <button class="button_type_1">Book Now</button>
+                    <button class="button_base button_type_1">Book Now</button>
                     <span class="price_value">$1,424</span>
                 </div>
             </div>
@@ -126,7 +150,7 @@
                 </div>
                 <img src="assets/images/reviews.svg" alt="Reviews">
                 <div class="button_price_holder">
-                    <button class="button_type_1">Book Now</button>
+                    <button class="button_base button_type_1">Book Now</button>
                     <span class="price_value">$1,954</span>
                 </div>
             </div>
@@ -141,7 +165,7 @@
                 </div>
                 <img src="assets/images/reviews.svg" alt="Reviews">
                 <div class="button_price_holder">
-                    <button class="button_type_1">Book Now</button>
+                    <button class="button_base button_type_1">Book Now</button>
                     <span class="price_value">$7,254</span>
                 </div>
             </div>
@@ -150,7 +174,7 @@
     <div id="blue_background"></div>
 </section>
 
-<section id="your_trusted_partner_section">
+<!-- <section id="your_trusted_partner_section">
     <section class="top_text_container">
         <h3>Your trusted partner in Real Estate Excellence</h3>
         <span class="info_paragraph">We guarantee that the products we sell will make our customers happy because we really care about our customer satisfaction</span>
@@ -159,33 +183,18 @@
     <section id="boxes_container">
 
         <section class="info_box">
-            <img src="assets/images/friendly_prices.svg" alt="Friendly Prices">
+            <svg class="icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="20" fill="#4C4DDC"/>
+                <path class="shape" d="M20.66 10.5181L20.63 10.5881L17.73 17.3181H14.88C14.2 17.3181 13.55 17.4581 12.96 17.7081L14.71 13.5281L14.75 13.4281L14.82 13.2681C14.84 13.2081 14.86 13.1481 14.89 13.0981C16.2 10.0681 17.68 9.37814 20.66 10.5181Z" fill="#4C4DDC" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="shape" d="M26.05 17.5181C25.6 17.3781 25.12 17.3181 24.64 17.3181H17.73L20.63 10.5881L20.66 10.5181C20.81 10.5681 20.95 10.6381 21.1 10.6981L23.31 11.6281C24.54 12.1381 25.4 12.6681 25.92 13.3081C26.02 13.4281 26.1 13.5381 26.17 13.6681C26.26 13.8081 26.33 13.9481 26.37 14.0981C26.41 14.1881 26.44 14.2781 26.46 14.3581C26.73 15.1981 26.57 16.2281 26.05 17.5181Z" fill="#4C4DDC" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="shape" d="M29.5217 22.1984V24.1484C29.5217 24.3484 29.5117 24.5484 29.5017 24.7484C29.3117 28.2384 27.3617 29.9984 23.6617 29.9984H15.8617C15.6217 29.9984 15.3817 29.9784 15.1517 29.9484C11.9717 29.7384 10.2717 28.0384 10.0617 24.8584C10.0317 24.6284 10.0117 24.3884 10.0117 24.1484V22.1984C10.0117 20.1884 11.2317 18.4584 12.9717 17.7084C13.5717 17.4584 14.2117 17.3184 14.8917 17.3184H24.6517C25.1417 17.3184 25.6217 17.3884 26.0617 17.5184C28.0517 18.1284 29.5217 19.9884 29.5217 22.1984Z" fill="#4C4DDC" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="shape" d="M14.71 13.5281L12.96 17.7081C11.22 18.4581 10 20.1881 10 22.1981V19.2681C10 16.4281 12.02 14.0581 14.71 13.5281Z" fill="#4C4DDC" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="shape" d="M29.5186 19.2677V22.1977C29.5186 19.9977 28.0586 18.1277 26.0586 17.5277C26.5786 16.2277 26.7286 15.2077 26.4786 14.3577C26.4586 14.2677 26.4286 14.1777 26.3886 14.0977C28.2486 15.0577 29.5186 17.0277 29.5186 19.2677Z" fill="#4C4DDC" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
 
             <div class="text_container">
                 <h6>Friendly prices</h6>
-                <!-- <span>We guarantee that the products we sell will make our customers happy because we really care.</span> -->
-            </div>
-
-            <img src="assets/images/arrow_circle_right.svg" alt="Arrow right">
-        </section>
-
-        <section class="info_box">
-            <img src="assets/images/friendly_prices.svg" alt="Friendly Prices">
-
-            <div class="text_container">
-                <h6>AI Recommendation</h6>
-                <!-- <span>We guarantee that the products we sell will make our customers happy because we really care.</span> -->
-            </div>
-
-            <img src="assets/images/arrow_circle_right.svg" alt="Arrow right">
-        </section>
-
-        <section class="info_box">
-            <img src="assets/images/friendly_prices.svg" alt="Friendly Prices">
-
-            <div class="text_container">
-                <h6>Fully Secured System</h6>
-                <!-- <span>We guarantee that the products we sell will make our customers happy because we really care.</span> -->
+                <span>We guarantee that the products we sell will make our customers happy because we really care.</span>
             </div>
 
             <img src="assets/images/arrow_circle_right.svg" alt="Arrow right">
@@ -199,7 +208,7 @@
     <section id="banner">
         <section id="banner_inside_container">
             <h2>Start listing or Buying a Best Home with BlumHouse</h2>
-            <button class="button_type_2">Get Started</button>
+            <button class="button_base button_type_2">Get Started</button>
         </section>
     </section>
 
@@ -214,13 +223,13 @@
             <span>International real estate company that offers services like property</span>
         </section>
 
-        <section id="right_text_container">
+        <section id="right_text_container" >
             <section class="links_column">
-                <span>Company</span>
+                <span >Company</span>
                 <a href="">About</a>
-                <a href="">How it Works</a>
+                <a href="">How&nbsp;it&nbsp;Works</a>
                 <a href="">Term</a>
-                <a href="">Privacy Policy</a>
+                <a href="">Privacy&nbsp;Policy</a>
             </section>
 
             <section class="links_column">
@@ -230,11 +239,11 @@
             </section>
 
             <section class="links_column" id="last_links_column">
-                <span>Follow Us</span>
+                <span>Follow&nbsp;Us</span>
                 <div id="social_media_icons_container">
-                    <a href=""><img src="assets/images/instagram.svg" alt="Instagram Link"></a>
-                    <a href=""><img src="assets/images/twitter.svg" alt="Twitter/X Link"></a>
-                    <a href=""><img src="assets/images/facebook.svg" alt="Facebook Link"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="assets/images/instagram.svg" alt="Instagram Link"></a>
+                    <a href="https://www.x.com" target="_blank"><img src="assets/images/twitter.svg" alt="Twitter/X Link"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="assets/images/facebook.svg" alt="Facebook Link"></a>
                 </div>
             </section>
         </section>
@@ -246,7 +255,7 @@
         <span>@2022 BlumHouse all rights reserved</span>
         <span><a href="">Terms and condition</a> &#8226; <a href="">Privacy policy</a></span>
     </section>
-</footer>
+</footer> -->
 
 </body>
 </html>
