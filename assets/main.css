@@ -11884,6 +11884,9 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 1% 7% 1% 7%;
+  top: 0;
+  position: sticky;
+  z-index: 999;
 }
 .navbar > img {
   width: 15%;
@@ -12192,6 +12195,14 @@ header #filter_selection > img {
 #in_demand_locations_section #recommended_locations_container .recommended_location {
   width: 32%;
   max-width: 30rem;
+  overflow: hidden;
+}
+#in_demand_locations_section #recommended_locations_container .recommended_location #blue_background {
+  position: absolute;
+  height: clamp(8rem, 13vw, 14rem);
+  width: 100%;
+  left: 0;
+  background-color: #4C4DDC;
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location > img {
   border-radius: 0.5rem 0.5rem 0 0;
@@ -12203,12 +12214,14 @@ header #filter_selection > img {
   width: 100%;
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location .bottom_part {
+  z-index: 2;
   background-color: #FFFFFF;
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
   height: clamp(7rem, 12vw, 12rem);
   max-height: 40%;
+  position: relative;
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location .bottom_part > img {
   width: 70%;
@@ -12262,12 +12275,6 @@ header #filter_selection > img {
   align-items: center;
   margin-top: 1rem;
 }
-#in_demand_locations_section #blue_background {
-  background-color: #4C4DDC;
-  height: 18vw;
-  max-height: 15rem;
-  margin-top: clamp(-12rem, -12vw, -7rem);
-}
 
 #your_trusted_partner_section {
   margin: auto;
@@ -12305,7 +12312,7 @@ header #filter_selection > img {
 #your_trusted_partner_section #boxes_container .info_box .text_container h6 {
   color: #4C4DDC;
   font-weight: 500;
-  font-size: clamp(1rem, 1.8vw, 2rem);
+  font-size: clamp(1rem, 1.8vw, 4rem);
 }
 #your_trusted_partner_section #boxes_container .info_box .text_container span {
   color: white;
@@ -12319,7 +12326,8 @@ header #filter_selection > img {
   font-size: clamp(0.9rem, 1.1vw, 1.2rem);
 }
 #your_trusted_partner_section #boxes_container .info_box .icon {
-  min-width: 2rem;
+  min-width: 1.2rem;
+  transform: scale(1.25);
   color: #4C4DDC;
   --shape-color: white;
 }

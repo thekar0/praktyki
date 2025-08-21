@@ -13,6 +13,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1% $padding 1% $padding;
+    top: 0;
+    position: sticky;
+    z-index: 999;
     >img
     {
         width: 15%;
@@ -366,6 +369,7 @@ header
     margin: auto;
     background-color: $soft_gray_color;
     padding: $padding 0 $padding 0;
+
     #top_text_container
     {
         padding: 0 $padding 0 $padding;
@@ -394,6 +398,15 @@ header
         {
             width: 32%;
             max-width: 30rem;
+            overflow: hidden;
+            #blue_background 
+            {
+                position: absolute;
+                height: clamp(8rem, 13vw, 14rem);
+                width: 100%;
+                left: 0;
+                background-color: $primary_color;
+            }
             >img
             {
                 border-radius: 0.5rem 0.5rem 0 0;
@@ -408,18 +421,21 @@ header
             }
             .bottom_part
             {
+                z-index: 2;
                 background-color: $background_color;
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 1rem;
                 height: clamp(7rem, 12vw, 12rem);
                 max-height: 40%;
+                position: relative;
                 >img
                 {
                     width: 70%;
                     min-width: 10rem;
                 }
             }
+
             .location_name
             {
                 display: flex;
@@ -476,15 +492,7 @@ header
                     margin-top: 1rem;
                 }
             }
-    
         }
-    }
-    #blue_background
-    {
-        background-color: $primary_color;
-        height: 18vw;
-        max-height: 15rem;
-        margin-top: clamp(-12rem, -12vw, -7rem);
     }
 }
 
@@ -528,17 +536,16 @@ header
             {
                 color: $primary_color;
                 font-weight: 500;
-                font-size: clamp(1rem, 1.8vw, 2rem);
+                font-size: clamp(1rem, 1.8vw, 4rem);
             }
-
             span 
             {
                 color: white;
-                opacity: 0;             // hide initially
-                max-height: 0;          // collapse height
+                opacity: 0;
+                max-height: 0;
                 overflow: hidden;
-                transition: all 0.5s; // smooth transition
-                display: block;         // ensure it behaves as a block
+                transition: all 0.5s;
+                display: block;
                 font-weight: 300;
                 width: 60%;
                 font-size: clamp(0.9rem, 1.1vw, 1.2rem);
@@ -546,7 +553,8 @@ header
         }  
         .icon 
         {
-            min-width: 2rem;
+            min-width: 1.2rem;
+            transform: scale(1.25);
             color: #4C4DDC;
             --shape-color: white;
         }
