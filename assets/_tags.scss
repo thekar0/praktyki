@@ -4,17 +4,16 @@
     border: none;
     border-radius: 0.8vw;
     font-weight: 600;
-    font-size: clamp(0.4rem, 1vw, 1.5rem);
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
 }
-
 .info_paragraph
 {
     color: rgb(177, 177, 177);
-    font-size: clamp(0.6rem, 1.1vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.1vw, 3rem);
 }
 
 h3 
 {
-    font-size: clamp(0.7rem, 2.7vw, 5rem); /* Responsive font size */
+    font-size: clamp(1.2rem, 2.7vw, 5rem); /* Responsive font size */
     font-weight: 600;
 }

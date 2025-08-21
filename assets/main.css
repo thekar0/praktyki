@@ -11859,16 +11859,16 @@ textarea.form-control-lg {
   border: none;
   border-radius: 0.8vw;
   font-weight: 600;
-  font-size: clamp(0.4rem, 1vw, 1.5rem);
+  font-size: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .info_paragraph {
   color: rgb(177, 177, 177);
-  font-size: clamp(0.6rem, 1.1vw, 1.1rem);
+  font-size: clamp(0.9rem, 1.1vw, 3rem);
 }
 
 h3 {
-  font-size: clamp(0.7rem, 2.7vw, 5rem); /* Responsive font size */
+  font-size: clamp(1.2rem, 2.7vw, 5rem); /* Responsive font size */
   font-weight: 600;
 }
 
@@ -11894,15 +11894,64 @@ h3 {
   width: 35%;
   margin-right: 10%;
   max-width: 40rem;
+}
+.navbar #links_holder section {
+  position: relative;
+  display: inline-block;
+}
+.navbar #links_holder section .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 15vw;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.navbar #links_holder section:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.navbar #links_holder section:hover .dropdown {
+  display: block;
+  background-color: white;
+  padding: 20% 150% 40% 40%;
+  border-radius: 0.5vw;
+}
+.navbar #links_holder section:hover .dropdown a {
+  font-size: 0.1rem, 0.3vw, 2rem !important;
+  font-weight: 400;
+  color: gray;
+}
+.navbar #links_holder section:hover .dropdown a:hover {
+  color: #4C4DDC;
+}
+.navbar #links_holder a, .navbar #links_holder span {
   color: grey;
   font-size: clamp(0.4rem, 1.1vw, 1.6rem);
+  text-decoration: none;
+}
+.navbar #links_holder section {
+  cursor: pointer;
+}
+.navbar #links_holder section img {
+  width: 1vw;
+  margin-left: 2%;
+  transition: all 0.3s;
+  filter: grayscale(1) brightness(190%);
+}
+.navbar #links_holder section:hover img {
+  transform: rotate(180deg);
+  filter: grayscale(0);
+}
+.navbar #links_holder section:hover span, .navbar #links_holder section:hover a {
+  color: #4C4DDC;
 }
 .navbar #links_holder section {
   display: flex;
   justify-content: space-around;
-}
-.navbar #links_holder img {
-  width: 30%;
 }
 .navbar #buttons_holder {
   width: 25%;
@@ -11912,6 +11961,7 @@ h3 {
 .navbar #buttons_holder #login_button, .navbar #buttons_holder #signup_button {
   width: 49%;
   font-weight: 600;
+  transition: all 0.3s;
 }
 .navbar #buttons_holder #login_button {
   background-color: white;
@@ -11920,6 +11970,9 @@ h3 {
 .navbar #buttons_holder #signup_button {
   background-color: #4C4DDC;
   color: white;
+}
+.navbar #buttons_holder #login_button:hover, .navbar #buttons_holder #signup_button:hover {
+  filter: brightness(0.8);
 }
 
 header {
@@ -11949,7 +12002,6 @@ header h1 img {
 header #header_text_container > .info_paragraph {
   display: block;
   width: 40%;
-  font-size: clamp(0.6rem, 1.1vw, 1.3rem);
 }
 header #buy_sell_rent_buttons {
   width: 45%;
@@ -11993,11 +12045,12 @@ header #filter_selection .filter {
 }
 header #filter_selection .filter section {
   display: flex;
+  align-items: center;
 }
 header #filter_selection .filter .filter_label {
   color: gray;
   font-weight: 500;
-  font-size: clamp(0.3rem, 1.2vw, 2rem);
+  font-size: clamp(0.5rem, 1.3vw, 2rem);
 }
 header #filter_selection .filter .filter_value {
   color: black;
@@ -12027,7 +12080,6 @@ header #filter_selection > img {
   color: #FFFFFF;
   font-weight: 500;
   aspect-ratio: 120/7;
-  margin: auto;
   width: 100%;
   background-color: #4C4DDC;
   overflow: hidden;
@@ -12037,13 +12089,13 @@ header #filter_selection > img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: clamp(0.3rem, 1.4vw, 3rem);
+  font-size: clamp(0.7rem, 1.4vw, 3rem);
 }
 #spacer img {
   margin: 0 2vw 0 0.7vw;
   height: 1.7vw;
   max-height: 2rem;
-  min-height: 0.2rem;
+  min-height: 0.6rem;
   aspect-ratio: 1/1;
 }
 #spacer div:first-of-type {
@@ -12100,12 +12152,12 @@ header #filter_selection > img {
   flex-direction: column;
 }
 #video_section #flexing_stats_container .flexing_stats .value {
-  font-size: clamp(1.1rem, 3.1vw, 4rem);
+  font-size: clamp(1.7rem, 3.1vw, 4rem);
   font-weight: 600;
   color: #4C4DDC;
 }
 #video_section #flexing_stats_container .flexing_stats .label {
-  font-size: clamp(0.6rem, 1.2vw, 2rem);
+  font-size: clamp(1rem, 1.2vw, 2rem);
   font-weight: 400;
   color: rgb(167, 167, 167);
 }
@@ -12160,6 +12212,7 @@ header #filter_selection > img {
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location .bottom_part > img {
   width: 70%;
+  min-width: 10rem;
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location .location_name {
   display: flex;
@@ -12170,13 +12223,13 @@ header #filter_selection > img {
 #in_demand_locations_section #recommended_locations_container .recommended_location .location_name > img {
   margin-right: 0.4rem;
   width: 10%;
-  max-width: 3rem;
+  max-width: 2rem;
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location .location_name > h4 {
   font-weight: 600;
   margin: 0;
   width: 90%;
-  font-size: clamp(0.4rem, 1.1vw, 2.8rem);
+  font-size: clamp(1rem, 1.8vw, 2.8rem);
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location div {
   display: flex;
@@ -12192,8 +12245,8 @@ header #filter_selection > img {
   background-color: #4C4DDC;
   font-weight: 500;
   transition: all 0.3s;
-  font-size: clamp(0.3rem, 1.1vw, 1.5rem);
-  min-height: 1rem;
+  font-size: clamp(0.7rem, 1.1vw, 1.5rem);
+  min-height: 2rem;
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location div .button_base:hover {
   background-color: #FFFFFF;
@@ -12201,7 +12254,7 @@ header #filter_selection > img {
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location div .price_value {
   color: #4C4DDC;
-  font-size: clamp(0.5rem, 1.8vw, 2rem);
+  font-size: clamp(1rem, 1.8vw, 2rem);
   font-weight: 600;
 }
 #in_demand_locations_section #recommended_locations_container .recommended_location div .button_price_holder {
@@ -12213,7 +12266,7 @@ header #filter_selection > img {
   background-color: #4C4DDC;
   height: 18vw;
   max-height: 15rem;
-  margin-top: clamp(-12rem, -10vw, -7rem);
+  margin-top: clamp(-12rem, -12vw, -7rem);
 }
 
 #your_trusted_partner_section {
@@ -12242,17 +12295,17 @@ header #filter_selection > img {
   background-color: #E4E4FA;
   justify-content: space-between;
   align-items: center;
-  padding: 1.3rem 1rem;
+  padding: 3% 2%;
   border-radius: 1rem;
   transition: all 0.5s;
 }
 #your_trusted_partner_section #boxes_container .info_box .text_container {
-  margin-left: 1rem;
+  margin-left: 2%;
 }
 #your_trusted_partner_section #boxes_container .info_box .text_container h6 {
   color: #4C4DDC;
   font-weight: 500;
-  font-size: clamp(0.8rem, 1.3vw, 1.3rem);
+  font-size: clamp(1rem, 1.8vw, 2rem);
 }
 #your_trusted_partner_section #boxes_container .info_box .text_container span {
   color: white;
@@ -12263,15 +12316,16 @@ header #filter_selection > img {
   display: block;
   font-weight: 300;
   width: 60%;
-  font-size: clamp(0.6rem, 1.1vw, 1.1rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.2rem);
 }
 #your_trusted_partner_section #boxes_container .info_box .icon {
+  min-width: 2rem;
   color: #4C4DDC;
   --shape-color: white;
 }
 #your_trusted_partner_section #boxes_container .info_box img:last-child {
   margin-left: auto;
-  width: clamp(1.5rem, 70%, 2.5rem);
+  width: clamp(2%, 70%, 2.5rem);
 }
 #your_trusted_partner_section #boxes_container .info_box:hover {
   cursor: pointer;
@@ -12282,7 +12336,7 @@ header #filter_selection > img {
 }
 #your_trusted_partner_section #boxes_container .info_box:hover .text_container span {
   opacity: 1;
-  max-height: 5rem;
+  max-height: 10rem;
 }
 #your_trusted_partner_section #boxes_container .info_box:hover .icon rect {
   fill: white;
@@ -12318,7 +12372,7 @@ header #filter_selection > img {
   width: 40%;
   aspect-ratio: 4/1;
   color: #4C4DDC;
-  font-size: clamp(0.6rem, 1.1vw, 2rem);
+  font-size: clamp(1rem, 1.1vw, 2rem);
 }
 
 footer {
@@ -12338,11 +12392,11 @@ footer #upper_text_container #left_text_container {
   color: white;
   font-weight: 300;
   width: 35%;
-  font-size: clamp(0.6rem, 1.2vw, 1.4rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.4rem);
 }
 footer #upper_text_container #left_text_container #logo {
   align-self: flex-start;
-  width: clamp(5rem, 70%, 20rem);
+  width: 100%;
   margin-bottom: 2%;
 }
 footer #upper_text_container #right_text_container {
@@ -12354,7 +12408,7 @@ footer #upper_text_container #right_text_container span {
   margin-bottom: 10%;
   color: white;
   font-weight: 500;
-  font-size: clamp(0.1rem, 1.7vw, 1.6rem);
+  font-size: clamp(1rem, 1.7vw, 1.6rem);
 }
 footer #upper_text_container #right_text_container a {
   margin-bottom: 5%;
@@ -12372,10 +12426,10 @@ footer .links_column #social_media_icons_container {
   justify-content: space-between;
 }
 footer .links_column #social_media_icons_container img {
-  width: clamp(0.6rem, 1.7vw, 1.75rem);
+  width: clamp(1.15rem, 1.7vw, 1.75rem);
 }
 footer .links_column > a {
-  font-size: clamp(0.4rem, 1.3vw, 1.2rem) !important;
+  font-size: clamp(0.75rem, 1.3vw, 1.2rem) !important;
 }
 footer #last_links_column {
   margin: 0;
@@ -12384,7 +12438,7 @@ footer #lower_text_container {
   margin-top: 2rem;
   color: white;
   display: flex;
-  font-size: clamp(0.6rem, 1vw, 1.2rem);
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
   justify-content: space-between;
 }
 footer #lower_text_container a {
@@ -12392,13 +12446,24 @@ footer #lower_text_container a {
   color: white;
 }
 footer a {
-  font-size: clamp(0.6rem, 1vw, 1.2rem) !important;
+  font-size: clamp(0.9rem, 1vw, 1.2rem) !important;
   transition: 0.3s filter;
 }
 footer a:hover {
   filter: brightness(0.8);
 }
 
+@media screen and (width < 600px) {
+  #in_demand_locations_section #recommended_locations_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #in_demand_locations_section #recommended_locations_container .recommended_location {
+    width: 70%;
+    max-width: 17rem;
+    margin-bottom: 2rem;
+  }
+}
 @media screen and (width < 500px) {
   #start_listing_section #banner {
     background-image: none;
@@ -12410,44 +12475,22 @@ footer a:hover {
   }
   #start_listing_section #banner #banner_inside_container button {
     margin-top: 1rem;
+    width: 65%;
+    border-radius: 3vw;
   }
 }
-@media (width < 700px) {
-  header {
-    background-image: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-  header #header_text_container > span {
-    margin: auto;
-    width: 40%;
-  }
-  header #buy_sell_rent_buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-    min-width: 18rem;
-  }
-  header #buy_sell_rent_buttons > .button_base {
-    width: 30%;
-  }
-  header #filter_selection {
-    width: 100%;
-  }
+@media screen and (width < 700px) {
   #video_section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
   #video_section #video_player {
-    width: 60% !important;
+    width: 100% !important;
     margin-bottom: 2%;
   }
   #video_section #text_container {
-    width: 60% !important;
+    width: 100% !important;
     text-align: center;
   }
 }
@@ -12466,14 +12509,50 @@ footer a:hover {
     margin: auto;
   }
   footer #upper_text_container #right_text_container {
-    width: 75%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
+  footer #lower_text_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer #lower_text_container span:first-child {
+    margin-bottom: 1rem;
+  }
 }
-@media screen and (width < 400px) {
+@media screen and (width < 700px) {
+  header {
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  header .info_paragraph {
+    width: 100% !important;
+  }
+  header #header_text_container > span {
+    margin: auto;
+    width: 40%;
+  }
+  header #buy_sell_rent_buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    min-width: 18rem;
+    width: 100% !important;
+  }
+  header #buy_sell_rent_buttons > .button_base {
+    width: 30%;
+  }
   header #filter_selection {
-    width: 50%;
+    width: 80% !important;
+  }
+  header #filter_selection {
+    width: 75% !important;
     flex-direction: column;
   }
   header #filter_selection .filter {
@@ -12485,6 +12564,9 @@ footer a:hover {
   }
   header #filter_selection .filter .filter_value {
     font-size: 0.82rem;
+  }
+  header #filter_selection .filter section img {
+    width: 5%;
   }
   header #filter_selection .filter_dropdown {
     justify-content: center;

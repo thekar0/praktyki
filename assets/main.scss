@@ -24,16 +24,85 @@
         width: 35%;
         margin-right: 10%;
         max-width: 40rem;
-        color: grey;
-        font-size: clamp(0.4rem, 1.1vw, 1.6rem);
+        section 
+        {
+            position: relative;
+            display: inline-block;
+        }
+
+        section .dropdown 
+        {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 15vw;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        section:hover .dropdown 
+        {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        section:hover .dropdown
+        {
+            display: block;
+            background-color: white;
+            padding: 20% 150% 40% 40%;
+            border-radius: 0.5vw;
+            a
+            {
+                font-size: (0.1rem, 0.3vw, 2rem) !important;
+                font-weight: 400;
+                color: gray;
+            }
+            a:hover
+            {
+                color: $primary_color;
+            }
+        }
+
+        a, span
+        {
+            color: grey;
+            font-size: clamp(0.4rem, 1.1vw, 1.6rem);
+            text-decoration: none;
+        }
+        section
+        {
+            cursor: pointer;
+            img
+            {
+                width: 1vw;
+                margin-left: 2%;
+                transition: all 0.3s;
+                filter: grayscale(1) brightness(190%);
+            }
+        }
+        section:hover
+        {
+            img
+            {
+                transform: rotate(180deg);
+                filter: grayscale(0);
+            }
+        }
+        section:hover
+        {
+            span, a
+            {
+                color: $primary_color;
+            }
+        }
         section
         {
             display: flex;
             justify-content: space-around;
-        }
-        img
-        {
-            width: 30%;
         }
     }
     #buttons_holder
@@ -45,6 +114,7 @@
         {
             width: 49%;
             font-weight: 600;
+            transition: all 0.3s;
         }
         #login_button
         {
@@ -55,6 +125,10 @@
         {
             background-color: $primary_color;
             color: white;
+        }
+        #login_button:hover, #signup_button:hover
+        {
+            filter: brightness(0.8);
         }
     }
 }
@@ -92,7 +166,6 @@ header
         {
             display: block;
             width: 40%;
-            font-size: clamp(0.6rem, 1.1vw, 1.3rem);
         }
     }
 
@@ -138,6 +211,7 @@ header
             section
             {
                 display: flex;
+                align-items: center;
             }
             height: 100%;
             width: 28%;
@@ -148,7 +222,7 @@ header
             {
                 color: gray;
                 font-weight: 500;
-                font-size: clamp(0.3rem, 1.2vw, 2rem);
+                font-size: clamp(0.5rem, 1.3vw, 2rem);
             }
             .filter_value
             {
@@ -189,7 +263,6 @@ header
     color: $background_color;
     font-weight: 500;
     aspect-ratio: 120/7;
-    margin: auto;
     width: $max_width;
     background-color: $primary_color;
     overflow: hidden;
@@ -199,14 +272,14 @@ header
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: clamp(0.3rem, 1.4vw, 3rem);
+        font-size: clamp(0.7rem, 1.4vw, 3rem);
     }
     img
     {
         margin: 0 2vw 0 0.7vw;
         height: 1.7vw;
         max-height: 2rem;
-        min-height: 0.2rem;
+        min-height: 0.6rem;
         aspect-ratio: 1/1;
     }
 
@@ -273,13 +346,13 @@ header
             flex-direction: column;
             .value
             {
-                font-size: clamp(1.1rem, 3.1vw, 4rem);
+                font-size: clamp(1.7rem, 3.1vw, 4rem);
                 font-weight: 600;
                 color: $primary_color;
             }
             .label
             {
-                font-size: clamp(0.6rem, 1.2vw, 2rem);
+                font-size: clamp(1rem, 1.2vw, 2rem);
                 font-weight: 400;
                 color: rgb(167, 167, 167);
             }
@@ -344,6 +417,7 @@ header
                 >img
                 {
                     width: 70%;
+                    min-width: 10rem;
                 }
             }
             .location_name
@@ -356,14 +430,14 @@ header
                 {
                     margin-right: 0.4rem;
                     width: 10%;
-                    max-width: 3rem;
+                    max-width: 2rem;
                 }
                 >h4
                 {
                     font-weight: 600;
                     margin: 0;
                     width: 90%;
-                    font-size: clamp(0.4rem, 1.1vw, 2.8rem);
+                    font-size: clamp(1rem, 1.8vw, 2.8rem);
                 }
             }
             div
@@ -381,8 +455,8 @@ header
                     background-color: $primary_color;
                     font-weight: 500;
                     transition: all 0.3s;
-                    font-size: clamp(0.3rem, 1.1vw, 1.5rem);
-                    min-height: 1rem;
+                    font-size: clamp(0.7rem, 1.1vw, 1.5rem);
+                    min-height: 2rem;
                 }
                 .button_base:hover
                 {
@@ -392,7 +466,7 @@ header
                 .price_value
                 {
                     color: $primary_color;
-                    font-size: clamp(0.5rem, 1.8vw, 2rem);
+                    font-size: clamp(1rem, 1.8vw, 2rem);
                     font-weight: 600;
                 }
                 .button_price_holder
@@ -410,7 +484,7 @@ header
         background-color: $primary_color;
         height: 18vw;
         max-height: 15rem;
-        margin-top: clamp(-12rem, -10vw, -7rem);
+        margin-top: clamp(-12rem, -12vw, -7rem);
     }
 }
 
@@ -444,17 +518,17 @@ header
         background-color: $lavender_color;
         justify-content: space-between;
         align-items: center;
-        padding: 1.3rem 1rem;
+        padding: 3% 2%;
         border-radius: 1rem;
         transition: all 0.5s;
         .text_container 
         {
-            margin-left: 1rem;
+            margin-left: 2%;
             h6 
             {
                 color: $primary_color;
                 font-weight: 500;
-                font-size: clamp(0.8rem, 1.3vw, 1.3rem);
+                font-size: clamp(1rem, 1.8vw, 2rem);
             }
 
             span 
@@ -467,11 +541,12 @@ header
                 display: block;         // ensure it behaves as a block
                 font-weight: 300;
                 width: 60%;
-                font-size: clamp(0.6rem, 1.1vw, 1.1rem);
+                font-size: clamp(0.9rem, 1.1vw, 1.2rem);
             }
         }  
         .icon 
         {
+            min-width: 2rem;
             color: #4C4DDC;
             --shape-color: white;
         }
@@ -479,7 +554,7 @@ header
         img:last-child 
         {
             margin-left: auto;
-            width: clamp(1.5rem, 70%, 2.5rem);
+            width: clamp(2%, 70%, 2.5rem);
         }
 
         &:hover 
@@ -495,7 +570,7 @@ header
                 span 
                 {
                     opacity: 1;       // show span
-                    max-height: 5rem; // enough height for the content
+                    max-height: 10rem; // enough height for the content
                 }
             }
 
@@ -542,7 +617,7 @@ header
                 width: 40%;
                 aspect-ratio: 4/1;
                 color: $primary_color;
-                font-size: clamp(0.6rem, 1.1vw, 2rem);
+                font-size: clamp(1rem, 1.1vw, 2rem);
             }
         }
     }
@@ -566,11 +641,11 @@ footer
             color: white;
             font-weight: 300;
             width: 35%;
-            font-size: clamp(0.6rem, 1.2vw, 1.4rem);
+            font-size: clamp(0.9rem, 1.2vw, 1.4rem);
             #logo
             {
                 align-self: flex-start;
-                width: clamp(5rem, 70%, 20rem);
+                width: 100%;
                 margin-bottom: 2%;
             }
         }
@@ -584,7 +659,7 @@ footer
                 margin-bottom: 10%;
                 color: white;
                 font-weight: 500;
-                font-size: clamp(0.1rem, 1.7vw, 1.6rem);
+                font-size: clamp(1rem, 1.7vw, 1.6rem);
             }
             a
             {
@@ -606,12 +681,12 @@ footer
             justify-content: space-between;
             img
             {
-                width: clamp(0.6rem, 1.7vw, 1.75rem);
+                width: clamp(1.15rem, 1.7vw, 1.75rem);
             }
         }
         >a
         {
-            font-size: clamp(0.4rem, 1.3vw, 1.2rem) !important;
+            font-size: clamp(0.75rem, 1.3vw, 1.2rem) !important;
         }
     }
     #last_links_column
@@ -623,7 +698,7 @@ footer
         margin-top: 2rem;
         color: white;
         display: flex;
-        font-size: clamp(0.6rem, 1vw, 1.2rem);
+        font-size: clamp(0.9rem, 1vw, 1.2rem);
         justify-content: space-between;
         a
         {
@@ -633,7 +708,7 @@ footer
     }
     a
     {
-        font-size: clamp(0.6rem, 1vw, 1.2rem) !important;
+        font-size: clamp(0.9rem, 1vw, 1.2rem) !important;
         transition: 0.3s filter;
     }
     a:hover
@@ -643,7 +718,25 @@ footer
 
 }
 
-@media screen and (width < 500px) 
+@media screen and (width < 600px) /* In Demand Locations */
+{
+    #in_demand_locations_section
+    {
+        #recommended_locations_container
+        {
+            flex-direction: column;
+            align-items: center;
+            .recommended_location
+            {
+                width: 70%;
+                max-width: 17rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (width < 500px) /* Banner */
 {
     #start_listing_section
     {
@@ -658,47 +751,16 @@ footer
                 button
                 {
                     margin-top: 1rem;
+                    width: 65%;
+                    border-radius: 3vw;
                 }
             }
         }
     }
 }
 
-@media (width < 700px) 
+@media screen and (width < 700px) /* Video Section */
 {
-    header 
-    {
-        background-image: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        #header_text_container
-        {
-            >span
-            {
-                margin: auto;
-                width: 40%;
-            }
-        }
-        #buy_sell_rent_buttons
-        {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 1rem;
-            min-width: 18rem;
-            >.button_base
-            {
-                width: 30%;
-            }
-        }
-        #filter_selection
-        {
-            width: 100%;
-        }
-    }
-
     #video_section
     {
         flex-direction: column;
@@ -706,18 +768,18 @@ footer
         align-items: center;
         #video_player
         {
-            width: 60% !important;
+            width: 100% !important;
             margin-bottom: 2%;
         }
         #text_container
         {
-            width: 60% !important;
+            width: 100% !important;
             text-align: center;
         }
     }
 }
 
-@media screen and (width < 700px) 
+@media screen and (width < 700px)  /* Footer */
 {
     footer 
     {
@@ -738,21 +800,68 @@ footer
             }
             #right_text_container
             {
-                width: 75%;
+                width: 100%;
                 margin-right: auto;
                 margin-left: auto;
+            }
+        }
+        #lower_text_container
+        {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            span:first-child
+            {
+                margin-bottom: 1rem;
             }
         }
     }
 }
 
-@media screen and (width < 400px)
+@media screen and (width < 700px) /* Header */
 {
+    header 
+    {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        .info_paragraph
+        {
+            width: 100% !important;
+        }
+        #header_text_container
+        {
+            >span
+            {
+                margin: auto;
+                width: 40%;
+            }
+        }
+        #buy_sell_rent_buttons
+        {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+            min-width: 18rem;
+            width: 100% !important;
+            >.button_base
+            {
+                width: 30%;
+            }
+        }
+        #filter_selection
+        {
+            width: 80% !important;
+        }
+    }
     header
     {
         #filter_selection
         {
-            width: 50%;
+            width: 75% !important;
             flex-direction: column;
             .filter
             {
@@ -765,6 +874,10 @@ footer
                 .filter_value
                 {
                     font-size: 0.82rem;
+                }
+                section img
+                {
+                    width: 5%;
                 }
             }
             .filter_dropdown
