@@ -9,12 +9,12 @@ const dropdowns = Array.from(document.getElementsByClassName("dropdown"))
 let unrolled = false
 
 
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', function()
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function()
     {
-            burger_holder.style.overflow = "visible"
+        burger_holder.style.overflow = "visible"
     })
-    });
+});
 
 burger.addEventListener('click', function()
 {
