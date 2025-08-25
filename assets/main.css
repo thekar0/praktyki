@@ -11888,7 +11888,15 @@ h3 {
   position: sticky;
   z-index: 999;
 }
+.navbar #burger_holder {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
 .navbar > img {
+  height: 100%;
   width: 15%;
 }
 .navbar #links_holder {
@@ -11978,6 +11986,73 @@ h3 {
   filter: brightness(0.8);
 }
 
+@media screen and (width < 1000px) {
+  .navbar {
+    transition: all 1s;
+  }
+  .navbar > img {
+    height: 100%;
+    min-width: 10rem;
+    margin: 0;
+  }
+  .navbar #burger_holder {
+    background-color: #FFFFFF;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: all 0.5s;
+  }
+  .navbar #burger_holder #links_holder {
+    width: 100%;
+    margin: 0;
+  }
+  .navbar #burger_holder #links_holder section {
+    justify-content: center;
+  }
+  .navbar #burger_holder #links_holder section a, .navbar #burger_holder #links_holder section span {
+    font-size: clamp(0.9rem, 2vw, 2rem);
+  }
+  .navbar #burger_holder #links_holder section img {
+    min-width: 0.8rem;
+    margin: 0;
+  }
+  .navbar #burger_holder #links_holder section .dropdown {
+    width: 10rem;
+    padding: 1rem;
+    left: -150%;
+  }
+  .navbar #burger_holder #buttons_holder {
+    width: 100%;
+    margin: 0;
+    margin-top: 5%;
+    max-width: 20rem;
+  }
+  .navbar #burger_holder #buttons_holder #login_button, .navbar #burger_holder #buttons_holder #signup_button {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+  .navbar #burger {
+    min-width: 1rem;
+    max-width: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: scale(2);
+  }
+  .navbar #burger .burger_element {
+    width: 90%;
+    height: 2px;
+    margin-bottom: 1px;
+    border-radius: 4px;
+    background-color: #4C4DDC;
+  }
+  .navbar #burger:hover {
+    transform: scale(2.4);
+  }
+  .navbar #burger:hover .burger_element {
+    filter: brightness(0.8);
+  }
+}
 header {
   padding: 7%;
   margin: auto;

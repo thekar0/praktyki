@@ -16,8 +16,17 @@
     top: 0;
     position: sticky;
     z-index: 999;
+    #burger_holder
+    {
+        display: flex;
+        height: 100%;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
     >img
     {
+        height: 100%;
         width: 15%;
     }
     #links_holder
@@ -134,6 +143,91 @@
             filter: brightness(0.8);
         }
     }
+}
+
+@media screen and (width < 1000px)
+{
+    .navbar
+    {
+        transition: all 1s;
+        >img
+        {
+            height: 100%;
+            min-width: 10rem;
+            margin: 0;
+        }
+        #burger_holder
+        {
+            background-color: $background_color;
+            width: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            max-height: 0;
+            padding: 0;
+            transition: all 0.5s;
+            #links_holder
+            {
+                width: 100%;
+                margin: 0;
+                section
+                {
+                    justify-content: center;
+                    a, span
+                    {
+                        font-size: clamp(0.9rem, 2vw, 2rem);
+                    }
+                    img
+                    {
+                        min-width: 0.8rem;
+                        margin: 0;
+                    }
+                    .dropdown
+                    {
+                        width: 10rem;
+                        padding: 1rem;
+                        left: -150%;
+                    }
+                }
+            }
+            #buttons_holder
+            {
+                width: 100%;
+                margin: 0;
+                margin-top: 5%;
+                max-width: 20rem;
+                #login_button, #signup_button
+                {
+                    font-size: clamp(1rem, 3vw, 1.5rem);
+                }
+            }
+        }
+        #burger
+        {
+            min-width: 1rem;
+            max-width: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            transform: scale(2);
+            .burger_element
+            {
+                width: 90%;
+                height: 2px;
+                margin-bottom: 1px;
+                border-radius: 4px;
+                background-color: $primary_color
+            }
+            &:hover
+            {
+                transform: scale(2.4);
+                .burger_element
+                {
+                    filter: brightness(0.8);
+                }
+            }
+        }
+        
+    }
+    
 }
 
 header 
