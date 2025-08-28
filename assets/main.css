@@ -11996,7 +11996,6 @@ h3 {
     margin: 0;
   }
   .navbar #burger_holder {
-    background-color: #FFFFFF;
     width: 100%;
     flex-direction: column;
     overflow: hidden;
@@ -12020,7 +12019,7 @@ h3 {
   }
   .navbar #burger_holder #links_holder section .dropdown {
     width: 10rem;
-    padding: 1rem;
+    padding: 0.5rem;
     left: -150%;
   }
   .navbar #burger_holder #buttons_holder {

@@ -8,15 +8,14 @@ body {
   font-family: "Encode Sans", sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 #form {
+  margin-top: 10vh !important;
+  margin-bottom: 10vh !important;
+  margin: auto;
   width: 90%;
-  max-width: 900px;
+  max-width: 1500px;
   background-color: $background_color;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

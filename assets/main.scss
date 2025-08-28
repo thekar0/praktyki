@@ -158,7 +158,6 @@
         }
         #burger_holder
         {
-            background-color: $background_color;
             width: 100%;
             flex-direction: column;
             overflow: hidden;
@@ -184,7 +183,7 @@
                     .dropdown
                     {
                         width: 10rem;
-                        padding: 1rem;
+                        padding: 0.5rem;
                         left: -150%;
                     }
                 }
